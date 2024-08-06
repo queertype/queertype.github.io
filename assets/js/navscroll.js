@@ -23,7 +23,7 @@ if ($(window).width() < 600) {
             });
 
             $(".logo").css({
-                "width": "4.5em"
+                "width": "3.5em"
             });
         }
 
@@ -33,3 +33,31 @@ if ($(window).width() < 600) {
 );
 
 
+
+$(window).on("resize", function () {
+    if ($(window).width() < 600) {
+        if (scrollTop < 10) {
+            $(".nav").css({
+                "filter": "drop-shadow(0px 0px 0px #3C50FF)",
+                "padding-top": ".8em",
+                "padding-bottom": ".4em"
+
+            });
+
+            $(".logo").css({
+                "width": "3.5em"
+            });
+        } 
+    } else {
+        $(".nav").css({
+            "filter": "drop-shadow(0px 0px 0px #3C50FF)",
+            "padding-top": "1em",
+            "padding-bottom": ".4em"
+
+        });
+
+        $(".logo").css({
+            "width": "5em"
+        });
+    } 
+})
