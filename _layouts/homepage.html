@@ -9,20 +9,20 @@
   <body>
 
 <div class="nav">
-    <a href="/"> <img src="queertype.github.io/assets/images/QF-Logo.svg" class="logo"></a>
+    <a href="/"> <img src="/queertype.github.io/assets/images/QF-Logo.svg" class="logo"></a>
 </div> 
     
     
     <div id="container">
             <div class="button">type design</div>
             <div class="spacer"></div>
-   	    <a href="queertype.github.io/lettering" class="button-light">lettering</a>
+   	    <a href="/lettering" class="button-light">lettering</a>
     
     	<div class="grid">
     	
     	{% for post in site.posts %}
   {% if post.categories contains 'type' %}
-        <a href="queertype.github.io/{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}" title="{{ post.title }}"></a>
+        <a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}" title="{{ post.title }}"></a>
           {% endif %}
 
         {% endfor %}
