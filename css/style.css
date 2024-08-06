@@ -4,7 +4,7 @@
 body {
   color: #3C50FF;
   background-color: #FFF6FE;
-  font-family: AntiphonyWIP;
+  font-family: "Antiphony";
   font-weight:400;
   font-size: 2.7em;
   line-height: 2.7rem;
@@ -39,6 +39,11 @@ background-color: #FFF6FE;
   @font-face {
     font-family: "SchusterFraktur";
     src: url("/assets/fonts/Schuster-Fraktur.otf");
+}
+
+  @font-face {
+    font-family: "Antiphony";
+    src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.ttf");
 }
 
 a {
