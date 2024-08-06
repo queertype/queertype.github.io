@@ -43,6 +43,8 @@ body {
 .nav{
 position:fixed;
 width:100%;
+      transition:.4s;
+
 /*
 padding-left:1em;
 padding-top:1em;

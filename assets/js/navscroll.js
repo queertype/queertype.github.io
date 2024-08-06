@@ -5,9 +5,9 @@ $(window).scroll(function () {
 if ($(window).width() < 600) {
     if (scrollTop > 10) {
             $(".nav").css({
-                "filter": "drop-shadow(0px 0px 10px #3C50FF) !important",
-                "padding-top": ".4em !important",
-                "padding-bottom": ".2em !important"
+                "filter": "drop-shadow(0px 0px 10px #3C50FF)",
+                "padding-top": ".4em",
+                "padding-bottom": ".2em"
 
             });
 
