@@ -47,7 +47,7 @@ background-color: #FFF6FE;
     z-index:11;
        text-align: center;
        padding-left:0em;
-       padding-top:.8em;
+       padding-top:.6em;
       transition:.4s;
     }
 }
@@ -234,7 +234,10 @@ figure img{
 .logo{
     width:5em;
           transition:.4s;
-
+ @media only screen and (max-width: 600px) {
+width:4.5em;
+ }
+          
 }
 
 .post p{
