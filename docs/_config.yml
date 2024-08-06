@@ -20,23 +20,17 @@
 
 domain: queertype.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://queertype.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: betsyschuster.github.io/queertype.github.io/      # place folder name if the site is served in a subfolder
+baseurl:       # place folder name if the site is served in a subfolder
 
-title: Your awesome title
-email: your-email@example.com
+title: betsy portfolio
+email: betsy@queertype.co
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  yes
+twitter_username: queertype_co
+github_username:  betsyschuster
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
