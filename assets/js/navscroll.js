@@ -57,7 +57,7 @@ $(window).on("resize", function () {
         });
 
 
-    }
+    };
 
     if ($(window).width() > 600) {
 
