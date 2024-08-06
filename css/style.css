@@ -97,6 +97,11 @@ padding-right:0em;
 
 
 .button{
+  @media only screen and (max-width: 600px) {
+    float:none;
+    display:inline-block;
+    position:relative;
+    }
   float:left;
   background-color:#AFFA9B;
   border: 0;
@@ -111,11 +116,28 @@ padding-right:0em;
   padding-right: 20px;
   padding-bottom: 10px;
   outline:4px solid #AFFA9B;
-  @media only screen and (max-width: 600px) {
+}
+
+.button-light{
+    @media only screen and (max-width: 600px) {
     float:none;
     display:inline-block;
     position:relative;
     }
+  float:left;
+  background-color:#FFF6FE;
+  border: 0;
+  border-radius: 100px;
+  font-size: 2.5rem;
+  font-family: "Antiphony";
+  line-height: 30px;
+  max-width: 480px;
+  min-width: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  outline:4px solid #AFFA9B;
 }
 
 .spacer{
@@ -131,27 +153,6 @@ width:5px;
 
 }
 
-.button-light{
-  float:left;
-  background-color:#FFF6FE;
-  border: 0;
-  border-radius: 100px;
-  font-size: 2.5rem;
-  font-family: "Antiphony";
-  line-height: 30px;
-  max-width: 480px;
-  min-width: 0px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  outline:4px solid #AFFA9B;
-    @media only screen and (max-width: 600px) {
-    float:none;
-    display:inline-block;
-    position:relative;
-    }
-}
 
 .button-light:hover{
   background-color:#AFFA9B;
