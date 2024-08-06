@@ -18,7 +18,7 @@ if ($(window).width() < 600) {
     };
 if ($(window).width() < 600) {
 
-    if (scrollTop < 10) {
+    if (scrollTop == 0) {
 
             $(".nav").css({
 
