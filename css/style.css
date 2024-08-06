@@ -48,6 +48,8 @@ background-color: #FFF6FE;
        text-align: center;
        padding-left:0em;
        padding-top:.8em;
+ padding-bottom :.4em;
+
       transition:.4s;
     }
 }
