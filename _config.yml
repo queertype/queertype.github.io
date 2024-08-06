@@ -30,8 +30,8 @@ twitter_username: queertype_co
 github_username:  queertype
 
 include:
- - _pages
- - .htaccess
+   - _pages
+   - .htaccess
 
 
 # Build settings
