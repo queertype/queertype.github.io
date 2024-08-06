@@ -22,7 +22,7 @@ if ($(window).width() < 600) {
 
             $(".nav").css({
 
-                "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
+                "filter": "drop-shadow(0px 0px 100px #3C50FF)",
                 "padding-top": ".8em",
                 "padding-bottom": ".4em"
 
@@ -72,5 +72,3 @@ $(window).on("resize", function () {
 
     ;
 });
-
-
