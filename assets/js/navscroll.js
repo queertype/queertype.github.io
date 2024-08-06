@@ -37,21 +37,6 @@ $(window).scroll(function () {
 
 );
 
-window.onscroll = function(ev) {
-  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-    $(".nav").css({
-                "filter": "drop-shadow(0px 0px 50px #3C50FF)",
-                "padding-top": ".4em",
-                "padding-bottom": ".2em"
-
-            });
-
-            $(".logo").css({
-                "width": "3.5em"
-            });
-  }
-};
-
 $(window).on("resize", function () {
     if ($(window).width() < 600) {
 
