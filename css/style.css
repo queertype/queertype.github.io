@@ -21,10 +21,9 @@
     src: url("/assets/fonts/ContrastBetsyCyril-Regular.ttf");
 }
 
-@media screen and (max-width: @screen-sm-max) {
-    html, body {
-        overflow: auto !important;
-    }
+html {
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 
