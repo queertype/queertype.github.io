@@ -32,35 +32,4 @@ if ($(window).width() < 600) {
 
 );
 
-$(window).on("resize", function () {
-    if ($(window).width() < 600) {
-
-        $(".nav").css({
-            "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-            "padding-top": ".8em",
-            "padding-bottom": ".4em"
-
-
-        });
-        $(".logo").css({
-            "width": "4,5em"
-        });
-
-
-    } else {
-
-        $(".nav").css({
-            "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-            "padding-top": "1em",
-            "padding-bottom": ".4em"
-
-
-        });
-        $(".logo").css({
-            "width": "5em"
-        });
-
-    };
-});
-
 
