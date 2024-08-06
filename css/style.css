@@ -21,6 +21,12 @@
     src: url("/assets/fonts/ContrastBetsyCyril-Regular.ttf");
 }
 
+@media screen and (max-width: @screen-sm-max) {
+    html, body {
+        overflow: auto !important;
+    }
+}
+
 
 body {
   color: #3C50FF;
