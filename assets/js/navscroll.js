@@ -1,74 +1,81 @@
+
+
+
+
+
 $(window).scroll(function () {
     document.title = window.scrollY
-    var scrollTop =  window.scrollY;
+    var scrollTop = window.scrollY;
 
-if( scrollTop > 10 ){
-    if ($(window).width() < 600) {
-    $(".nav").css({
-     "filter": "drop-shadow(0px 0px 10px #3C50FF)",
-     "padding-top": ".4em",
-     "padding-bottom": ".2em"
+    if (scrollTop > 10) {
+        if ($(window).width() < 600) {
+            $(".nav").css({
+                "filter": "drop-shadow(0px 0px 10px #3C50FF)",
+                "padding-top": ".4em",
+                "padding-bottom": ".2em"
 
-    });
-    
-     $(".logo").css({
-     "width": "3.5em"
-        });
-};
-if( scrollTop < 50 ){
+            });
+
+            $(".logo").css({
+                "width": "3.5em"
+            });
+        }
+    };
+
+    if (scrollTop < 10) {
+        if ($(window).width() < 600) {
+
+            $(".nav").css({
+
+                "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
+                "padding-top": ".8em",
+                "padding-bottom": ".4em"
+
+            });
+            $(".logo").css({
+                "width": "4.5em"
+            });
+        }
+
+    }
+}
+
+);
+
+$(window).on("resize", function () {
     if ($(window).width() < 600) {
 
         $(".nav").css({
+            "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
+            "padding-top": ".8em",
+            "padding-bottom": ".4em"
 
-     "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-          "padding-top": ".8em",
-          "padding-bottom": ".4em"
 
-    });
-     $(".logo").css({
-     "width": "4.5em"
         });
-        }
+        $(".logo").css({
+            "width": "4,5em"
+        });
+
 
     }
-        }
 
-});
+    if ($(window).width() > 600) {
 
-$( window ).on( "resize", function() {
-    if ($(window).width() < 600) {
-
-  $(".nav").css({
-     "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-     "padding-top": ".8em",
-      "padding-bottom": ".4em"
+        $(".nav").css({
+            "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
+            "padding-top": "1em",
+            "padding-bottom": ".4em"
 
 
-    });
-        $(".logo").css({
-     "width": "4.5em"
         });
-    
-    
-    }
-    
-        if ($(window).width() > 600) {
-        
-          $(".nav").css({
-     "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-     "padding-top": "1em",
-      "padding-bottom": ".4em"
-
-
-    });
         $(".logo").css({
-     "width": "5em"
+            "width": "5em"
         });
-    
+
     };
 
-    
+
     ;
-} );
+});
 
 
