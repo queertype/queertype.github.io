@@ -112,13 +112,9 @@ padding-right:0em;
   padding-bottom: 10px;
   outline:4px solid #AFFA9B;
   @media only screen and (max-width: 600px) {
-    font-size: 3.2rem;
     float:none;
     display:inline-block;
     position:relative;
-      padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 17px;
     }
 }
 
@@ -151,10 +147,6 @@ width:5px;
   padding-bottom: 10px;
   outline:4px solid #AFFA9B;
     @media only screen and (max-width: 600px) {
-        font-size: 3.2rem;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 17px;
     float:none;
     display:inline-block;
     position:relative;
