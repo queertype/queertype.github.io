@@ -2,8 +2,8 @@ $(window).scroll(function () {
     document.title = window.scrollY
     var scrollTop = window.scrollY;
 
+if ($(window).width() < 600) {
     if (scrollTop > 10) {
-        if ($(window).width() < 600) {
             $(".nav").css({
                 "filter": "drop-shadow(0px 0px 10px #3C50FF)",
                 "padding-top": ".4em",
@@ -16,9 +16,9 @@ $(window).scroll(function () {
             });
         }
     };
+if ($(window).width() < 600) {
 
     if (scrollTop < 10) {
-        if ($(window).width() < 600) {
 
             $(".nav").css({
 
