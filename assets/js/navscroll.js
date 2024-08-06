@@ -35,6 +35,7 @@ if ($(window).width() < 600) {
 
 
 $(window).on("resize", function () {
+    var w = $(this).width();
     if ($(window).width() < 600) {
         if (scrollTop < 10) {
             $(".nav").css({
@@ -47,7 +48,19 @@ $(window).on("resize", function () {
             $(".logo").css({
                 "width": "3.5em"
             });
-        } 
+        } else if (w > 600) {
+            $(".nav").css({
+                "filter": "drop-shadow(0px 0px 0px #3C50FF)",
+                "padding-top": ".8em",
+                "padding-bottom": ".4em"
+
+            });
+            $(".logo").css({
+                "width": "3.5em"
+            });
+
+        }
+
     } else {
         $(".nav").css({
             "filter": "drop-shadow(0px 0px 0px #3C50FF)",
@@ -59,5 +72,5 @@ $(window).on("resize", function () {
         $(".logo").css({
             "width": "5em"
         });
-    } 
+    }
 })
