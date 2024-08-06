@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    {% include head.html %}
+    </head>
+
+    
+    
+  <body>
+
+<div class="nav">
+    <a href="/"> <img src="/assets/images/QF-Logo.svg" class="logo"></a>
+</div> 
+    
+    
+    <div id="container">
+            <div class="button">type design</div>
+            <div class="spacer"></div>
+   	    <a href="/lettering" class="button-light">lettering</a>
+    
+    	<div class="grid">
+    	
+    	{% for post in site.posts %}
+  {% if post.categories contains 'type' %}
+        <a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}" title="{{ post.title }}"></a>
+          {% endif %}
+
+        {% endfor %}
+        
+        
+    	</div>
+    </div>
+    <div id="bio">
+    {{ content }}
+    </div>
+  </body>
+</html>
