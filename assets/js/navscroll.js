@@ -40,7 +40,7 @@ $(window).scroll(function () {
 window.onscroll = function(ev) {
   if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
     $(".nav").css({
-                "filter": "drop-shadow(0px 0px 10px #3C50FF)",
+                "filter": "drop-shadow(0px 0px 50px #3C50FF)",
                 "padding-top": ".4em",
                 "padding-bottom": ".2em"
 
