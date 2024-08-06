@@ -1,4 +1,13 @@
 
+  @font-face {
+    font-family: "SchusterFraktur";
+    src: url("/assets/fonts/Schuster-Fraktur.otf");
+}
+
+  @font-face {
+    font-family: "Antiphony";
+    src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.ttf");
+}
 
 
 body {
@@ -34,17 +43,6 @@ background-color: #FFF6FE;
 
 
 
-
-
-  @font-face {
-    font-family: "SchusterFraktur";
-    src: url("/assets/fonts/Schuster-Fraktur.otf");
-}
-
-  @font-face {
-    font-family: "Antiphony";
-    src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.ttf");
-}
 
 a {
   color: #3C50FF;
