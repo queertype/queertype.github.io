@@ -120,7 +120,7 @@ a {
   border-radius:100px;
   font-family: "Antiphony-Bold";
   line-height: 1.8rem;
-  padding: 5px 20px;
+  padding: 5px 20px 8px 20px;
   text-align:center;
   display: inline-block;
   font-size: 2.5rem;
@@ -141,7 +141,7 @@ a {
   font-size: 2.5rem;
   font-family: "Antiphony";
   line-height: 1.8rem;
-  padding: 5px 20px;
+  padding: 5px 20px 8px 20px;
   text-align:center;
   display: inline-block;
   font-size: 2.5rem;
