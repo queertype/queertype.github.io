@@ -1,14 +1,28 @@
-<style>  @font-face {
+<style>
+@font-face {
     font-family: "SchusterFraktur";
     src: url("/assets/fonts/Schuster-Fraktur.otf");
 }
+
+
+
+body{
+  background-color: #FFF6EE;
+  color: #232348;
+}
+
+
+  .logo {
+      content: url('/assets/images/posts/Unger/QF-Logo-Unger.svg'); /* Replace with your smaller image */
+  }
+
 
   .post{
     display:inline-block;
     width:90%;
     margin-left:0%;
     font-family: "SchusterFraktur";
-    color:#000;
+    color:#232348;
     font-size: 2rem;
     line-height: 2.5rem;
 
@@ -22,21 +36,23 @@
   }
 }
 
-figure.small{
-  display:inline-block;
-  width:45%;
-  margin-left:0%;
-  float:left;
-  margin-right:1.5em;
-  margin-top: -1.5em;
-
-
+.nav {
   @media only screen and (max-width: 600px) {
-    width: 100%;
-    margin-left: 0%;
-    margin-right:0;
+
+    background-color: #FFF6EE;
   }
 }
+
+
+figcaption{
+
+border-left:3px solid #232348;
+@media only screen and (max-width: 600px) {
+  border-left:0px solid #232348;
+}
+}
+
+
 
 
 .post p {
@@ -48,5 +64,9 @@ figure.small{
     margin-left: 2.5%;
   }
 
+}
+
+.post p:first-of-type {
+  margin-top: -1.5%;
 }
 </style>

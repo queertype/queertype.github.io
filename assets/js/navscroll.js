@@ -1,40 +1,54 @@
 $(window).on("scroll resize", function () {
-    // Get the current scroll position and window width
+    // Get the current scroll position, window width, and page name
     var scrollTop = $(window).scrollTop();
     var windowWidth = $(window).width();
-
-    // Determine if the width is less than 600px
     var isMobile = windowWidth < 600;
+    var isSchusterFrakturPage = window.location.pathname === "/type/2021/05/02/SchusterFraktur.html";
+
+
+    // Set the default color and size variables
+    var shadowColor = isSchusterFrakturPage ? "#232348" : "#3C50FF"; // Different color for Unger Fraktur page
+    var noShadowColor = "#FFF6FE";
+    var navPaddingTop, navPaddingBottom, logoWidth;
 
     // Apply styles based on scroll position and window width
     if (isMobile) {
         if (scrollTop > 10) {
+            navPaddingTop = ".4em";
+            navPaddingBottom = ".2em";
+            logoWidth = "3.5em";
             $(".nav").css({
-                "filter": "drop-shadow(0px 0px 10px #3C50FF)",
-                "padding-top": ".4em",
-                "padding-bottom": ".2em"
+                "filter": "drop-shadow(0px 0px 10px " + shadowColor + ")",
+                "padding-top": navPaddingTop,
+                "padding-bottom": navPaddingBottom
             });
             $(".logo").css({
-                "width": "3.5em"
+                "width": logoWidth
             });
         } else {
+            navPaddingTop = ".8em";
+            navPaddingBottom = ".4em";
+            logoWidth = "4.5em";
             $(".nav").css({
-                "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-                "padding-top": ".8em",
-                "padding-bottom": ".4em"
+                "filter": "drop-shadow(0px 0px 0px " + noShadowColor + ")",
+                "padding-top": navPaddingTop,
+                "padding-bottom": navPaddingBottom
             });
             $(".logo").css({
-                "width": "4.5em"
+                "width": logoWidth
             });
         }
     } else {
+        navPaddingTop = "1em";
+        navPaddingBottom = ".4em";
+        logoWidth = "5em";
         $(".nav").css({
-            "filter": "drop-shadow(0px 0px 0px #FFF6FE)",
-            "padding-top": "1em",
-            "padding-bottom": ".4em"
+            "filter": "drop-shadow(0px 0px 0px " + noShadowColor + ")",
+            "padding-top": navPaddingTop,
+            "padding-bottom": navPaddingBottom
         });
         $(".logo").css({
-            "width": "5em"
+            "width": logoWidth
         });
     }
 });
