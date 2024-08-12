@@ -3,33 +3,32 @@
 
 <head>
   {% include head.html %}
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/assets/js/portfolio_masonry.js"></script>
+  
 
+  <!-- Ensure CSS is loaded first -->
   <link href="/css/lightbox.css" rel="stylesheet" />
-  <script src="/assets/js/lightbox.js"></script>
+  <style>
+    /* Add critical CSS here if necessary to style the nav and bio immediately */
+  </style>
 
-
-  <script>
-    lightbox.option({
-      'imageFadeDuration': 0,
-      'resizeDuration': 00,
-      'wrapAround': true,
-      'fitImagesInViewport': true,
-      'showImageNumberLabel': false
-    })
-  </script>
 </head>
 
 <body>
 
+  <!-- Place your nav and bio elements here -->
   <div class="nav">
     <a href="/"> <img src="/assets/images/QF-Logo.svg" class="logo"></a>
   </div>
 
   <div id="container">
-    <div id="typedesign-b"><img src="/assets/images/buttons/typedesign2.svg"></div>
+    <!-- Your content sections here -->
+    <div id="typedesign-b" class="button"><img src="/assets/images/buttons/typedesign2.svg"></div>
     <div class="spacer"></div>
     <div id="lettering-b"><img src="/assets/images/buttons/lettering1.svg"></div>
-  
+
     <!-- Pre-render both content sections -->
     <div class="grid" id="grid-type">
       {% for post in site.posts %}
@@ -40,25 +39,36 @@
       {% endfor %}
     </div>
 
-    
-  
     <div class="grid" id="grid-lettering" style="display:none;">
       {% for post in site.posts %}
       {% if post.categories contains 'lettering' %}
       <a href="{{ post.image | prepend: site.baseurl }}" data-lightbox="Lettering">
-          <img src="{{ post.image | prepend: site.baseurl }}" class="grid-item"
-               alt="{{ post.title }}" title="{{ post.title }}">
+        <img src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}"
+          title="{{ post.title }}">
       </a>
       {% endif %}
       {% endfor %}
     </div>
   </div>
 
+  <!-- Bio section -->
   <div id="bio">
     {{ content }}
   </div>
 
+  <!-- JavaScript loaded at the end for non-blocking -->
+  <script src="/assets/js/lightbox.js"></script>
   <script type="text/javascript" src="/assets/js/buttonclick.js"></script>
+
+  <script>
+    lightbox.option({
+      'imageFadeDuration': 0,
+      'resizeDuration': 0,
+      'wrapAround': true,
+      'fitImagesInViewport': true,
+      'showImageNumberLabel': false
+    });
+  </script>
 
 </body>
 

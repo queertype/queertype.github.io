@@ -1,16 +1,29 @@
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
-@font-face {
-  font-family: "SchusterFraktur";
-  src: url("/assets/fonts/Schuster-Fraktur.otf");
-}
-
 @font-face {
   font-family: "Antiphony";
   src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.woff");
 }
+
+
+#bio {
+  margin-left: 1em;
+  width: 23%;
+  float: left;
+  margin-top: 3em;
+  position: fixed;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: .5em;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    width: 90%;
+    position: relative;
+  }
+}
+
+
 
 
 @font-face {
@@ -22,6 +35,11 @@
 @font-face {
   font-family: "Unnamed";
   src: url("/assets/fonts/ContrastBetsyCyril-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SchusterFraktur";
+  src: url("/assets/fonts/Schuster-Fraktur.otf");
 }
 
 
@@ -78,22 +96,6 @@ a {
 
 }
 
-#bio {
-  margin-left: 1em;
-  width: 23%;
-  float: left;
-  margin-top: 3em;
-  position: fixed;
-
-  @media only screen and (max-width: 600px) {
-    margin-top: .5em;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    width: 90%;
-    position: relative;
-  }
-}
-
 
 #container {
   margin-top: 1.6em;
@@ -105,7 +107,7 @@ a {
 
   @media only screen and (max-width: 600px) {
 
-    padding-top: 20%;
+    padding-top: 25%;
     padding-left: 0em;
     padding-right: 0em;
     width: 100%;
@@ -186,6 +188,25 @@ a {
 
 .button-light:hover {
   background-color: #AFFA9B;
+}
+
+.post-navigation {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.next-post-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.next-post-button:hover {
+  background-color: #0056b3;
 }
 
 
@@ -308,6 +329,23 @@ figure img {
     margin-left: 5%;
   }
 
+}
+
+
+figcaption{
+  font-family:'Unnamed';
+margin-left:1em;
+font-size:1.2rem;
+line-height:1.8rem;
+margin-top:-2rem;
+margin-bottom:1rem;
+border-left:3px solid #3C50FF;
+padding-left: .8em;
+@media only screen and (max-width: 600px) {
+  font-size:1.5rem;
+line-height:2rem;
+  margin-bottom:2rem;
+}
 }
 
 
