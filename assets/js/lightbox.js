@@ -47,7 +47,7 @@
     imageFadeDuration: 600,
     // maxWidth: 800,
     // maxHeight: 600,
-    positionFromTop: 50,
+    positionFromTop: 120,
     resizeDuration: 700,
     showImageNumberLabel: true,
     wrapAround: true,
@@ -271,119 +271,103 @@
 
     this.changeImage(imageNumber);
   };
+  
 
-  // Hide most UI elements in preparation for the animated resizing of the lightbox.
   Lightbox.prototype.changeImage = function(imageNumber) {
     var self = this;
     var filename = this.album[imageNumber].link;
     var filetype = filename.split('.').slice(-1)[0];
     var $image = this.$lightbox.find('.lb-image');
 
-    // Disable keyboard nav during transitions
     this.disableKeyboardNav();
-
-    // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
     $('.lb-loader').fadeIn('slow');
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
     this.$outerContainer.addClass('animating');
 
-    // When image to show is preloaded, we send the width and height to sizeContainer()
     var preloader = new Image();
     preloader.onload = function() {
-      var $preloader;
-      var imageHeight;
-      var imageWidth;
-      var maxImageHeight;
-      var maxImageWidth;
-      var windowHeight;
-      var windowWidth;
+        var $preloader;
+        var imageHeight;
+        var imageWidth;
+        var maxImageHeight;
+        var maxImageWidth;
+        var windowHeight;
+        var windowWidth;
 
-      $image.attr({
-        'alt': self.album[imageNumber].alt,
-        'src': filename
-      });
+        $image.attr({
+            'alt': self.album[imageNumber].alt,
+            'src': filename
+        });
 
-      $preloader = $(preloader);
+        $preloader = $(preloader);
 
-      $image.width(preloader.width);
-      $image.height(preloader.height);
+        $image.width(preloader.width);
+        $image.height(preloader.height);
 
-      var aspectRatio = preloader.width / preloader.height;
+        var aspectRatio = preloader.width / preloader.height;
 
-      windowWidth = $(window).width();
-      windowHeight = $(window).height();
+        windowWidth = $(window).width();
+        windowHeight = $(window).height();
 
-      // Calculate the max image dimensions for the current viewport.
-      // Take into account the border around the image and an additional 10px gutter on each side.
-      maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 500;
-      maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 30;
+        maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 500;
+        maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 30;
 
-      /*
-      Since many SVGs have small intrinsic dimensions, but they support scaling
-      up without quality loss because of their vector format, max out their
-      size inside the viewport.
-      */
-      if (filetype === 'svg') {
-        if (aspectRatio >= 1) {
-          imageWidth = maxImageWidth;
-          imageHeight = parseInt(maxImageWidth / aspectRatio, 10);
-        } else {
-          imageWidth = parseInt(maxImageHeight / aspectRatio, 10);
-          imageHeight = maxImageHeight;
-        }
-        $image.width(imageWidth);
-        $image.height(imageHeight);
-
-      } else {
-
-        // Fit image inside the viewport.
-        if (self.options.fitImagesInViewport) {
-
-          // Check if image size is larger then maxWidth|maxHeight in settings
-          if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
-            maxImageWidth = self.options.maxWidth;
-          }
-          if (self.options.maxHeight && self.options.maxHeight < maxImageHeight) {
-            maxImageHeight = self.options.maxHeight;
-          }
-
-        } else {
-          maxImageWidth = self.options.maxWidth || preloader.width || maxImageWidth;
-          maxImageHeight = self.options.maxHeight || preloader.height || maxImageHeight;
-        }
-
-        // Is the current image's width or height is greater than the maxImageWidth or maxImageHeight
-        // option than we need to size down while maintaining the aspect ratio.
-        if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {
-          if ((preloader.width / maxImageWidth) > (preloader.height / maxImageHeight)) {
-            imageWidth  = maxImageWidth;
-            imageHeight = parseInt(preloader.height / (preloader.width / imageWidth), 10);
+        if (filetype === 'svg') {
+            var scaleFactor = 0.95;
+            var svgMargin = 40; // Set margin for SVGs
+            if (aspectRatio >= 1) {
+                imageWidth = maxImageWidth * scaleFactor - svgMargin * 2;
+                imageHeight = parseInt(maxImageWidth * scaleFactor / aspectRatio, 10) - svgMargin * 2;
+            } else {
+                imageWidth = parseInt(maxImageHeight * scaleFactor / aspectRatio, 10) - svgMargin * 2;
+                imageHeight = maxImageHeight * scaleFactor - svgMargin * 2;
+            }
             $image.width(imageWidth);
             $image.height(imageHeight);
-          } else {
-            imageHeight = maxImageHeight;
-            imageWidth = parseInt(preloader.width / (preloader.height / imageHeight), 10);
-            $image.width(imageWidth);
-            $image.height(imageHeight);
-          }
+        } else {
+            // Fit image inside the viewport for non-SVG images.
+            if (self.options.fitImagesInViewport) {
+                if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
+                    maxImageWidth = self.options.maxWidth;
+                }
+                if (self.options.maxHeight && self.options.maxHeight < maxImageHeight) {
+                    maxImageHeight = self.options.maxHeight;
+                }
+            } else {
+                maxImageWidth = self.options.maxWidth || preloader.width || maxImageWidth;
+                maxImageHeight = self.options.maxHeight || preloader.height || maxImageHeight;
+            }
+
+            if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {
+                if ((preloader.width / maxImageWidth) > (preloader.height / maxImageHeight)) {
+                    imageWidth  = maxImageWidth;
+                    imageHeight = parseInt(preloader.height / (preloader.width / imageWidth), 10);
+                    $image.width(imageWidth);
+                    $image.height(imageHeight);
+                } else {
+                    imageHeight = maxImageHeight;
+                    imageWidth = parseInt(preloader.width / (preloader.height / imageHeight), 10);
+                    $image.width(imageWidth);
+                    $image.height(imageHeight);
+                }
+            }
         }
-      }
 
-      self.sizeContainer($image.width(), $image.height());
-      var window_height = windowHeight;
-    var img_height = $image.height();
-    var scroll_offset  = $(window).scrollTop();
-    var view_offset = window_height/2 - img_height/2 - 100;
-    var top_distance = scroll_offset + view_offset;
+        self.sizeContainer($image.width(), $image.height());
 
-    self.$lightbox.css('top', top_distance+'px');
+        var window_height = windowHeight;
+        var img_height = $image.height();
+        var scroll_offset  = $(window).scrollTop();
+        var view_offset = window_height / 2 - img_height / 2 - 100;
+        var top_distance = scroll_offset + view_offset;
+
+        self.$lightbox.css('top', top_distance + 'px');
     };
 
-    // Preload image before showing
     preloader.src = this.album[imageNumber].link;
     this.currentImageIndex = imageNumber;
-  };
+};
 
   // Stretch overlay to fit the viewport
   Lightbox.prototype.sizeOverlay = function() {
@@ -410,8 +394,9 @@
 
     var oldWidth  = this.$outerContainer.outerWidth();
     var oldHeight = this.$outerContainer.outerHeight();
-    var newWidth  = imageWidth + this.containerPadding.left + this.containerPadding.right + this.imageBorderWidth.left + this.imageBorderWidth.right;
-    var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
+    var margin = 40; // This should match the margin value you set in the CSS
+    var newWidth  = imageWidth + this.containerPadding.left + this.containerPadding.right + this.imageBorderWidth.left + this.imageBorderWidth.right + margin * 2;
+    var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom + margin * 2;
 
     function postResize() {
       self.$lightbox.find('.lb-dataContainer').width(newWidth);

@@ -3,13 +3,27 @@
 
 <head>
   {% include head.html %}
+ 
+  
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="/assets/js/portfolio_masonry.js"></script>
+  <script type="text/javascript" src="/assets/js/buttonclick.js"></script>
   
+
 
   <!-- Ensure CSS is loaded first -->
   <link href="/css/lightbox.css" rel="stylesheet" />
+    <script src="/assets/js/lightbox.js"></script>
+    <script>
+      lightbox.option({
+          'imageFadeDuration' : 0,
+        'resizeDuration': 0,
+        'wrapAround': true,
+        'fitImagesInViewport': true,
+        'showImageNumberLabel':false
+      })
+    </script>
   <style>
     /* Add critical CSS here if necessary to style the nav and bio immediately */
   </style>
@@ -57,18 +71,7 @@
   </div>
 
   <!-- JavaScript loaded at the end for non-blocking -->
-  <script src="/assets/js/lightbox.js"></script>
-  <script type="text/javascript" src="/assets/js/buttonclick.js"></script>
-
-  <script>
-    lightbox.option({
-      'imageFadeDuration': 0,
-      'resizeDuration': 0,
-      'wrapAround': true,
-      'fitImagesInViewport': true,
-      'showImageNumberLabel': false
-    });
-  </script>
+ 
 
 </body>
 

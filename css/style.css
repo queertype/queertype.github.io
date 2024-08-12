@@ -125,7 +125,7 @@ a {
   line-height:0;
   float:left;
   outline:4px solid #AFFA9B;
-  transition: .4s;
+  transition: .2s;
   border-radius: 40px;
   padding: 0px 20px;
   border: none;
@@ -140,7 +140,7 @@ a {
   line-height:0;
   float:left;
   outline:4px solid #AFFA9B;
-  transition: .4s;
+  transition: .2s;
   border-radius: 40px;
   padding: 0px 20px;
   border: none;
@@ -211,7 +211,7 @@ a {
 
 
 .grid {
-  margin-top: 2em;
+  margin-top: 1.8em;
   width: 100%;
 
   @media only screen and (max-width: 600px) {
@@ -245,8 +245,9 @@ a {
 }
 
 #grid-lettering {
+  margin-top: 2.3em;
   @media only screen and (max-width: 600px) {
-    margin-top: 1em;
+    margin-top: .6em;
   }
 }
 
@@ -257,11 +258,11 @@ a {
 }
 
 #grid-lettering .grid-item {
-  width: 28%;
-  margin-right: 5%;
+  width: 29.3%;
+  margin-right: 4%;
   border-radius: 0vw;
   float: left;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
