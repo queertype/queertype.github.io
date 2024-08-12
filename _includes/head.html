@@ -8,7 +8,7 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <link rel="stylesheet" href="{{ baseurl }}{{ "/css/modern-normalize.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ baseurl }}{{ "/css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ baseurl }}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -18,6 +18,7 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript" src="/assets/js/portfolio_masonry.js"></script>
+
 
 <script type="text/javascript" src="/assets/js/navscroll.js"></script>
 

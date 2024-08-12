@@ -1,3 +1,7 @@
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
 @font-face {
   font-family: "SchusterFraktur";
   src: url("/assets/fonts/Schuster-Fraktur.otf");
@@ -5,13 +9,13 @@
 
 @font-face {
   font-family: "Antiphony";
-  src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.ttf");
+  src: url("/assets/fonts/AntiphonyWIP-HeadingRegularContraItalic.woff");
 }
 
 
 @font-face {
   font-family: "Antiphony-Bold";
-  src: url("/assets/fonts/AntiphonyWIP-HeadingBoldContraItalic.ttf");
+  src: url("/assets/fonts/AntiphonyWIP-HeadingBoldContraItalic.woff");
 }
 
 
@@ -30,6 +34,9 @@ body {
   font-size: 2.7em;
   line-height: 2.7rem;
   margin: 0px;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 
   @media only screen and (max-width: 600px) {
     font-size: 3.4em;
@@ -107,47 +114,59 @@ a {
   }
 }
 
-
-.button {
+#typedesign-b{
   @media only screen and (max-width: 600px) {
     float: none;
     display: inline-block;
     position: relative;
   }
+  line-height:0;
   float:left;
-  background-color: #AFFA9B;
-  border: none;
-  border-radius: 50px;
-  padding:0px 20px;
-  height:auto;
-  margin:0px;
-  height:2.5rem;
   outline:4px solid #AFFA9B;
-  font-family: "Antiphony-Bold";
-  text-align:center;
-  line-height:2.5rem;
-  font-size: 2.5rem;
+  transition: .4s;
+  border-radius: 40px;
+  padding: 0px 20px;
+  border: none;
+}
+
+#lettering-b{
+  @media only screen and (max-width: 600px) {
+    float: none;
+    display: inline-block;
+    position: relative;
+  }
+  line-height:0;
+  float:left;
+  outline:4px solid #AFFA9B;
+  transition: .4s;
+  border-radius: 40px;
+  padding: 0px 20px;
+  border: none;
+}
+
+
+
+.button {
+  background-color: #AFFA9B;
 }
 
 .button-light {
-  @media only screen and (max-width: 600px) {
-    float: none;
-    display: inline-block;
-    position: relative;
-  }
-  float:left;
   background-color: #FFF6FE;
-  border: 0;
-  border-radius: 50px;
-  padding:0px 20px;
-  height:auto;
-  margin:0px;
+}
+
+
+#lettering-b img{
+  padding:0;
+  padding-top:2px;
+  margin:0;
   height:2.5rem;
-  outline:4px solid #AFFA9B;
-  font-family: "Antiphony";
-  text-align:center;
-  line-height:2.5rem;
-  font-size: 2.5rem;
+}
+
+#typedesign-b img{
+  padding:0;
+  padding-top:2px;
+  margin:0;
+  height:2.5rem;
 }
 
 .spacer {
@@ -167,8 +186,6 @@ a {
 
 .button-light:hover {
   background-color: #AFFA9B;
-
-
 }
 
 
@@ -205,6 +222,32 @@ a {
   }
 
 }
+
+#grid-lettering {
+  @media only screen and (max-width: 600px) {
+    margin-top: 1em;
+  }
+}
+
+#grid-lettering a {
+  @media only screen and (max-width: 600px) {
+    pointer-events: none;
+  }
+}
+
+#grid-lettering .grid-item {
+  width: 28%;
+  margin-right: 5%;
+  border-radius: 0vw;
+  float: left;
+  margin-bottom: 5%;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 13%;
+  }
+}
+
 
 
 figure {
@@ -266,6 +309,8 @@ figure img {
   }
 
 }
+
+
 
 
 h1 {

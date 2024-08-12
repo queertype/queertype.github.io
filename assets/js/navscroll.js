@@ -35,6 +35,8 @@ $(window).scroll(function () {
 
 
 $(window).on("resize", function () {
+    document.title = window.scrollY
+    var scrollTop = window.scrollY;
     var w = $(this).width();
     if ($(window).width() < 600) {
         if (scrollTop < 10) {

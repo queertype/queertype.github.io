@@ -1,97 +1,99 @@
 <!doctype html>
 <html>
-<head>
-    {% include head.html %}
-    
-    <link href="/css/lightbox.css" rel="stylesheet" />
-    <script src="/assets/js/lightbox.js"></script>
 
-    
-    <script>
+<head>
+  {% include head.html %}
+
+  <link href="/css/lightbox.css" rel="stylesheet" />
+  <script src="/assets/js/lightbox.js"></script>
+
+
+  <script>
     lightbox.option({
-        'imageFadeDuration' : 0,
+      'imageFadeDuration': 0,
       'resizeDuration': 00,
       'wrapAround': true,
       'fitImagesInViewport': true,
-      'showImageNumberLabel':false
+      'showImageNumberLabel': false
     })
-	</script>
-	
+  </script>
 
 
 
-    
-    <style>
-
-    
-    .grid{
-
-@media only screen and (max-width: 600px) {
-
- margin-top:1em;
-
-}
-
- a {
-   @media only screen and (max-width: 600px) {
-  pointer-events: none;
-  }
-}
-    
-    .grid-item{
-  width: 28%;
-  margin-right:5%;
-  border-radius:0vw;
-  float: left;
-  margin-bottom:5%;
-  
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-      margin-bottom:13%;
-  
-}
 
 
-}
+  <style>
+    .grid {
 
-    </style>
-    </head>
+      @media only screen and (max-width: 600px) {
 
-    
+        margin-top: 1em;
+
+      }
+
+      a {
+        @media only screen and (max-width: 600px) {
+          pointer-events: none;
+        }
+      }
+
+      .grid-item {
+        width: 28%;
+        margin-right: 5%;
+        border-radius: 0vw;
+        float: left;
+        margin-bottom: 5%;
+
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+          margin-bottom: 13%;
+
+        }
+
+
+      }
+  </style>
+</head>
+
+
 <div class="nav">
-    <a href="/"> <img src="/assets/images/QF-Logo.svg" class="logo"></a>
-</div> 
-    
-  <body>
+  <a href="/"> <img src="/assets/images/QF-Logo.svg" class="logo"></a>
+</div>
 
-    
-    
-    <div id="container">
-            <a href="/" class="button-light">type design</a>
-            <div class="spacer"></div>
-   	    <div class="button">lettering</div>
-    
-    	<div class="grid">
-    	
-    	{% for post in site.posts %}
-  {% if post.categories contains 'lettering' %}
-    
-  <a href="{{ post.image | prepend: site.baseurl }}" data-lightbox="Lettering"> <img src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}" title="{{ post.title }}"></a>
-  {% endif %}
-{% endfor %}
-    	
+<body>
 
-    	</div>
+
+
+  <div id="container">
+    <a href="/" class="button-light"><img src="/assets/images/buttons/typedesign1.svg"></a>
+    <div class="spacer"></div>
+    <div class="button"><img src="/assets/images/buttons/lettering2.svg"></div>
+
+
+    <div class="grid">
+
+      {% for post in site.posts %}
+      {% if post.categories contains 'lettering' %}
+
+      <a href="{{ post.image | prepend: site.baseurl }}" data-lightbox="Lettering"> <img
+          src="{{ post.image | prepend: site.baseurl }}" class="grid-item" alt="{{ post.title }}"
+          title="{{ post.title }}"></a>
+      {% endif %}
+      {% endfor %}
+
+
     </div>
-    
-       <div id="bio">
+  </div>
+
+  <div id="bio">
     <br>
-QueerType is an independent type design studio founded by Betsy Schuster.
-<br><br>
-For licensing or other inquiries, please contact betsy@queertype.co
-<br><br>
+    QueerType is an independent type design studio founded by Betsy Schuster.
+    <br><br>
+    For licensing or other inquiries, please contact betsy@queertype.co
+    <br><br>
 
-    </div>
+  </div>
 
-  </body>
+</body>
+
 </html>

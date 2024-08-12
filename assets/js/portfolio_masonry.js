@@ -11,3 +11,4 @@ $grid.on("layoutComplete", function(o, r) {
  $grid.masonry("layout")
 });
 });
+
