@@ -2,12 +2,20 @@ $(window).on("scroll resize", function () {
     // Get the current scroll position, window width, and page name
     var scrollTop = $(window).scrollTop();
     var windowWidth = $(window).width();
-    var isMobile = windowWidth < 600;
-    var isSchusterFrakturPage = window.location.pathname === "/type/2021/05/02/SchusterFraktur.html";
-
+    var isMobile = windowWidth < 1000;
+    var isSchusterFrakturPage = window.location.pathname.endsWith("SchusterFraktur.html");
+    var isPollyPage = window.location.pathname.endsWith("Polly.html");
 
     // Set the default color and size variables
-    var shadowColor = isSchusterFrakturPage ? "#232348" : "#3C50FF"; // Different color for Unger Fraktur page
+    var shadowColor;
+    if (isSchusterFrakturPage) {
+        shadowColor = "#232348"; // Different color for Schuster Fraktur page
+    } else if (isPollyPage) {
+        shadowColor = "#0a1e5a"; // Different color for Polly page
+    } else {
+        shadowColor = "#3C50FF"; // Default color
+    }
+    
     var noShadowColor = "#FFF6FE";
     var navPaddingTop, navPaddingBottom, logoWidth;
 

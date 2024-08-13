@@ -14,7 +14,7 @@
   margin-top: 3em;
   position: fixed;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     margin-top: .5em;
     margin-bottom: 5%;
     margin-left: 5%;
@@ -56,7 +56,7 @@ body {
 	-moz-osx-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     font-size: 3.4em;
     line-height: 3.4rem;
   }
@@ -75,7 +75,7 @@ body {
   transition: .4s;
   
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
 
     width: 110%;
     margin-left: -5%;
@@ -105,9 +105,9 @@ a {
   z-index: 10;
   float: right;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
 
-    padding-top: 25%;
+    margin-top: 3.6em;
     padding-left: 0em;
     padding-right: 0em;
     width: 100%;
@@ -117,7 +117,7 @@ a {
 }
 
 #typedesign-b{
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     float: none;
     display: inline-block;
     position: relative;
@@ -132,7 +132,7 @@ a {
 }
 
 #lettering-b{
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     float: none;
     display: inline-block;
     position: relative;
@@ -178,7 +178,7 @@ a {
   width: 18px;
   height: 1px;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     float: none;
     width: 5px;
   }
@@ -214,7 +214,7 @@ a {
   margin-top: 1.8em;
   width: 100%;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     width: 92%;
     margin-left: 4%;
     margin-top: .5em;
@@ -236,7 +236,7 @@ a {
   float: left;
   margin-bottom: 1.7%;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     border-radius: 5vw;
     width: 100%;
     margin-bottom: 4.7%;
@@ -246,13 +246,13 @@ a {
 
 #grid-lettering {
   margin-top: 2.3em;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     margin-top: .6em;
   }
 }
 
 #grid-lettering a {
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     pointer-events: none;
   }
 }
@@ -264,7 +264,7 @@ a {
   float: left;
   margin-bottom: 2%;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
     margin-bottom: 13%;
   }
@@ -285,16 +285,17 @@ figure img {
   border-radius: .8em;
 }
 
+
+
 figure.small{
   display:inline-block;
   width:45%;
   margin-left:0%;
   float:left;
   margin-right:1.5em;
-  margin-top: -1.5em;
 
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
     margin-left: 0%;
     margin-right:0;
@@ -314,7 +315,7 @@ figure.small{
   margin-bottom: 15%;
   text-align: left;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     margin-left: 4%;
     width: 92%;
 
@@ -323,23 +324,22 @@ figure.small{
 
 }
 
-.post img {
-  margin-top: 50px;
-  margin-bottom: 30px; 
-  width: 100%;
-}
 
 
 .logo {
   width: 5em;
   transition: .4s;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     width: 4.5em;
   }
 }
 
-@media (max-width: 600px) {
+.ungerswap img {
+  border-radius:0;
+}
+
+@media (max-width: 1000px) {
   .ungerswap img {
       content: url('/assets/images/posts/Unger/UngerSchusterCaps-Mob.svg'); /* Replace with your smaller image */
   }
@@ -348,14 +348,34 @@ figure.small{
 
 .post p {
   margin-left: 10%;
-  width: 50%;
+  width: 55%;
   margin-bottom: .5em; /* between paragraphs */
 
-  @media only screen and (max-width: 600px) {
-    width: 90%;
+  @media only screen and (max-width: 1500px) {
+    width: 75%;
     margin-left: 5%;
-  }
 
+  @media only screen and (max-width: 1000px) {
+    width: 97%;
+    margin-left: 1.5%;
+  }
+  }
+}
+
+figure img{
+  margin-top: 50px;
+  margin-bottom: 30px; 
+  width: 100%;
+  @media only screen and (max-width: 1000px) {
+    margin-top: 30px;
+    margin-bottom: 10px; 
+  }
+}
+
+
+figure + figure  img {
+  margin-top: 10px; /* Apply padding to img when the figure is next to another figure */
+  margin-bottom:10px;
 }
 
 
@@ -369,7 +389,7 @@ margin-bottom:1rem;
 border-left:3px solid #3C50FF;
 width:90%;
 padding-left: .8em;
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   text-align:center;
   width:100%;
   border-left:0px solid #3C50FF;

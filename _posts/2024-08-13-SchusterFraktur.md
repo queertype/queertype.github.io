@@ -4,7 +4,7 @@ title:  Schuster Fraktur
 categories: type
 font: schusterfraktur.html
 image: /assets/images/posts/SchusterFraktur.svg
-date: 2021-05-02
+date: 2024-08-11
 
 ---
 
