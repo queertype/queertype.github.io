@@ -1,73 +1,87 @@
 <style>
-@font-face {
+  @font-face {
     font-family: "SchusterFraktur";
     src: url("/assets/fonts/Schuster-Fraktur.otf");
-}
+  }
 
 
 
-body{
-  background-color: #FFF6EE;
-  color: #232348;
-}
+  body {
+    background-color: #FFF6EE;
+    color: #232348;
+  }
 
 
   .logo {
-      content: url('/assets/images/posts/Unger/QF-Logo-Unger.svg'); /* Replace with your smaller image */
+    content: url('/assets/images/posts/Unger/QF-Logo-Unger.svg');
+    /* Replace with your smaller image */
   }
 
 
-  .post{
-    display:inline-block;
-    width:90%;
-    margin-left:0%;
+  .post {
     font-family: "SchusterFraktur";
-    color:#232348;
+    color: #232348;
     font-size: 2rem;
     line-height: 2.5rem;
-
- -webkit-hyphens: auto;
- -moz-hyphens: auto;
- -ms-hyphens: auto;
- hyphens: auto;
- @media only screen and (max-width: 1000px) {
-  font-size: 1.8rem;
-  line-height: 2.1rem;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
-}
 
-.nav {
-  @media only screen and (max-width: 1000px) {
-
-    background-color: #FFF6EE;
-  }
-}
-
-
-figcaption{
-
-border-left:2px solid #232348;
-@media only screen and (max-width: 1000px) {
-  border-left:0px solid #232348;
-}
-}
-
-
-
-
-.post p {
-  margin-left: 15%;
-  width: 75%;
-  
   @media only screen and (max-width: 1500px) {
-    width: 85%;
-    margin-left: 5%;
+    .post{
+      font-size: 1.9rem;
+      line-height: 2.4rem;
+    }
+  }
 
   @media only screen and (max-width: 1000px) {
-    width: 97%;
-    margin-left: 1.5%;
+    .post{
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
   }
+
+
+
+  .nav {
+    @media only screen and (max-width: 1000px) {
+
+      background-color: #FFF6EE;
+    }
   }
-}
+
+
+  figcaption {
+
+    border-left: 2px solid #232348;
+
+    @media only screen and (max-width: 1000px) {
+      border-left: 0px solid #232348;
+    }
+  }
+
+
+  .post p {
+    margin-left: 15%;
+    width: 75%;
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .post p{
+        width: 90%;
+        margin-left: 4%;
+      }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .post p{
+        width: 97%;
+        margin-left: 1.5%;
+      }
+  }
+
+
 
 </style>
