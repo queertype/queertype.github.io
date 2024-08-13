@@ -36,6 +36,12 @@ body {
   font-smoothing: antialiased;
 }
 
+a[href^="mailto"] {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-decoration: none;
+}
+
 @media only screen and (max-width: 1500px) {
   body{
   font-size: 2.4em;
@@ -124,7 +130,7 @@ a {
 #lettering-b {
   line-height: 0;
   float: left;
-  border: 4px solid #AFFA9B;
+  border: 3px solid #AFFA9B;
   transition: .2s;
   border-radius: 40px;
   padding: 0 20px;
@@ -215,7 +221,7 @@ a {
 }
 
 #grid-lettering a {
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1500px) {
     pointer-events: none;
   }
 }
@@ -226,19 +232,26 @@ a {
   border-radius: 0vw;
   float: left;
   margin-bottom: 2%;
+}
 
-  @media only screen and (max-width: 1500px) {
-    width: 100%;
-    margin-bottom: 8%;
-    margin-right: 0%;
+@media only screen and (max-width: 1500px) {
+  #grid-lettering .grid-item{
+  width: 100%;
+  margin-bottom: 8%;
+  margin-right: 0%;
   }
+}
 
-  @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
+  #grid-lettering .grid-item{
     width: 100%;
     margin-bottom: 13%;
     margin-right: 0%;
   }
 }
+
+
+
 
 figure {
   display: block;

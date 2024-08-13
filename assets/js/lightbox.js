@@ -314,7 +314,7 @@
         maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 30;
 
         if (filetype === 'svg') {
-            var scaleFactor = 0.95;
+            var scaleFactor = 1;
             var svgMargin = 40; // Set margin for SVGs
             if (aspectRatio >= 1) {
                 imageWidth = maxImageWidth * scaleFactor - svgMargin * 2;
@@ -323,6 +323,16 @@
                 imageWidth = parseInt(maxImageHeight * scaleFactor / aspectRatio, 10) - svgMargin * 2;
                 imageHeight = maxImageHeight * scaleFactor - svgMargin * 2;
             }
+            var maxSvgHeight = 700; // Example: limit SVG height to 400px
+
+
+    if (imageHeight > maxSvgHeight) {
+        imageHeight = maxSvgHeight;
+        imageWidth = parseInt(maxSvgHeight * aspectRatio, 10); // Adjust width to maintain aspect ratio
+    }
+
+
+          
             $image.width(imageWidth);
             $image.height(imageHeight);
         } else {
