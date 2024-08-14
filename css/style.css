@@ -327,14 +327,12 @@ figure.small {
 @media (max-width: 1000px) {
   .ungerswap img {
     content: url('/assets/images/posts/Unger/UngerSchusterCaps-Mob.svg');
-    /* Replace with your smaller image */
   }
 }
 
 @media (max-width: 1000px) {
   .unnamedswap img {
     content: url('/assets/images/posts/Unnamed/Contrast-Glyphs-Mob.svg');
-    /* Replace with your smaller image */
   }
 }
 
