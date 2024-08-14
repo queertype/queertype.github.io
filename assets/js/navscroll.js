@@ -5,6 +5,7 @@ $(window).on("scroll resize", function () {
     var isMobile = windowWidth < 1000;
     var isSchusterFrakturPage = window.location.pathname.endsWith("SchusterFraktur.html");
     var isPollyPage = window.location.pathname.endsWith("Polly.html");
+    var isUnnamedPage = window.location.pathname.endsWith("Unnamed.html");
 
     // Set the default color and size variables
     var shadowColor;
@@ -12,7 +13,9 @@ $(window).on("scroll resize", function () {
         shadowColor = "#232348"; // Different color for Schuster Fraktur page
     } else if (isPollyPage) {
         shadowColor = "#0a1e5a"; // Different color for Polly page
-    } else {
+    } else if (isUnnamedPage) {
+        shadowColor = "#B43232"; // Different color for Polly page
+    }else {
         shadowColor = "#3C50FF"; // Default color
     }
     
