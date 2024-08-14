@@ -13,6 +13,34 @@
  */
 // Uses Node, AMD or browser globals to create a module.
 
+jQuery(function($) {
+  function updateMobileBehavior() {
+    var width = $(window).width();
+
+    if (width < 1500) {
+      // Add the click event handler
+      $("#grid-lettering a").off('click.mobile').on('click.mobile', function(e) {
+        // Prevent the default clicking functionality
+        e.preventDefault();
+        // Stop the event from propagating to Lightbox handlers
+        e.stopImmediatePropagation();
+
+      });
+    } else {
+      // Remove the click event handler if the width is >= 1024
+      $("#grid-lettering a").off('click.mobile');
+    }
+  }
+
+  // Run the function on page load
+  updateMobileBehavior();
+
+  // Run the function on window resize
+  $(window).on('resize', function() {
+    updateMobileBehavior();
+  });
+});
+
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -572,3 +600,6 @@
 
   return new Lightbox();
 }));
+
+
+
