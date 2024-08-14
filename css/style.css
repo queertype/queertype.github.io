@@ -33,13 +33,7 @@ body {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-a[href^="mailto"] {
-  text-decoration: none;
-  color: inherit;
-  -webkit-text-decoration: none;
+  font-smooth: antialiased;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -165,13 +159,13 @@ a {
 
 .spacer {
   float: left;
-  display: inline-block;
   position: relative;
   width: 18px;
   height: 1px;
 
   @media only screen and (max-width: 1000px) {
     float: none;
+    display: inline-block;
     width: 5px;
   }
 }
@@ -257,8 +251,6 @@ a {
 }
 
 
-
-
 figure {
   display: block;
   margin-block-start: 0em;
@@ -273,7 +265,7 @@ figure img {
 }
 
 figure.small {
-  display: inline-block;
+
   width: 45%;
   margin-left: 0%;
   float: left;
@@ -325,8 +317,25 @@ figure.small {
 }
 
 @media (max-width: 1000px) {
-  .ungerswap img {
+  .ungerswap-caps img {
     content: url('/assets/images/posts/Unger/UngerSchusterCaps-Mob.svg');
+  }
+}
+
+@media (max-width: 1000px) {
+  .ungerswap-num img {
+    content: url('/assets/images/posts/Unger/SpecChar-Num-Mob.svg');
+  }
+}
+
+@media (max-width: 1000px) {
+  .ungerswap-salome img {
+    content: url('/assets/images/posts/Unger/SalomeSpec-Mob.svg');
+  }
+}
+@media (max-width: 1000px) {
+  .ungerswap-lang img {
+    content: url('/assets/images/posts/Unger/LangSupport-Mob.svg');
   }
 }
 
@@ -404,6 +413,24 @@ figcaption {
   }
 }
 
+.centercap figcaption {
+  text-align: center;
+  width: 100%;
+  border-left: 0px solid #3C50FF;
+  padding-bottom: .6em;
+  margin-left: 0em;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  padding-left: 0;
+  margin-top: -1.6rem;
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 1.2rem;
+    margin-top: -.5rem;
+    padding-bottom: 1em;
+  }
+}
+
 h1 {
   line-height: 2rem;
 }
@@ -419,3 +446,4 @@ hr:before {
 
 hr:after {
   content: attr(data-content)
+}

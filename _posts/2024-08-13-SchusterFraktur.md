@@ -46,4 +46,16 @@ Below: Weiss Fraktur digitization by Gerhard Helzel" %}
 
 In total, Schuster Fraktur contains 627 glyphs. The base set includes Uppercase and Lowercase, numerals, punctuation, special characters, and glyphs in the Latin Extended-A Unicode block. It also includes a stylistic set and discretionary ligatures for setting Fraktur type in its original format. This stylistic set includes alternate lowercase forms, capitals, and a dot accent & dieresis that follow Unger’s original design.
 
-{% include figure image_path="/assets/images/posts/Unger/UngerSchusterCaps-Hor.svg" class="norad, ungerswap" %}
+{% include figure image_path="/assets/images/posts/Unger/UngerSchusterCaps-Hor.svg" class="norad, ungerswap-caps" %}
+
+{% include figure image_path="/assets/images/posts/Unger/SalomeSpec.svg" class="norad, ungerswap-salome" %}
+
+{% include figure image_path="/assets/images/posts/Unger/SpecChar-Num.svg" class="norad, ungerswap-num" %}
+
+{% include figure image_path="/assets/images/posts/Unger/LangSupport.svg" class="norad, ungerswap-lang" %}
+
+{% include figure image_path="/assets/images/posts/Unger/LangSch.svg" class="norad, centercap" caption="Latin Extended-A Unicode Block" %}
+
+{% include figure image_path="/assets/images/posts/Unger/LangUng.svg" class="norad, centercap" caption="Latin Extended-A Unicode Block, Stylistic Set" %}
+
+{% include figure image_path="/assets/images/posts/Unger/BetsyJohann.svg" class="norad" %}
