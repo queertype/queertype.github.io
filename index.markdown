@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Home
+title: QueerType
 ---
 
 QueerType is an independent type design studio founded by Betsy Schuster.

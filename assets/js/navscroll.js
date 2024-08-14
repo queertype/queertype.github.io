@@ -22,9 +22,9 @@ $(window).on("scroll resize", function () {
     // Apply styles based on scroll position and window width
     if (isMobile) {
         if (scrollTop > 10) {
-            navPaddingTop = ".4em";
-            navPaddingBottom = ".2em";
-            logoWidth = "3.5em";
+            navPaddingTop = ".3em";
+            navPaddingBottom = ".1em";
+            logoWidth = "3em";
             $(".nav").css({
                 "filter": "drop-shadow(0px 0px 10px " + shadowColor + ")",
                 "padding-top": navPaddingTop,

@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  Antiphony
+title: QueerType — Antiphony
 categories: type
 image: /assets/images/posts/Antiphony.svg
 date: 2024-08-13

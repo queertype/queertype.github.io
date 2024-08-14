@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  Schuster Fraktur
+title:  QueerType — Schuster Fraktur
 categories: type
 font: schusterfraktur.html
 image: /assets/images/posts/SchusterFraktur.svg
