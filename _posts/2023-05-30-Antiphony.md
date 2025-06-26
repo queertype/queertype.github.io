@@ -20,7 +20,8 @@ For my TypeMedia final project, I knew I wanted to do something extreme and unus
 
 Because of the extreme angle of the forward and reverse italics, Antiphony is suitable for setting type at 45° in either direction. Additionally, the fluid nature of the design allows naturally setting the type on curved paths. The Antiphony type family contains 2 Display Italic styles, 2 Display Contra-Italic styles, and 2 Heading styles.
 
-Antiphony was conceived during the TypeMedia MA Type Design program at the Royal Academy of Art, The Hague. It is currently in development, but you can contact me for trial fonts.
+Antiphony was conceived during the TypeMedia MA Type Design program at the Royal Academy of Art, The Hague. It is currently in development. The Display Italic and the Display Contra-Italic are now available for licensing on [FutureFonts](https://www.futurefonts.com/queertype/antiphony)
+
 
 
 
